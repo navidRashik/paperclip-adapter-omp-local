@@ -1,7 +1,7 @@
 {
   "name": "paperclip-adapter-omp-local",
-  "version": "0.1.0",
-  "description": "Paperclip external adapter that runs OMP (Oh My Pi) as a native local agent runtime \u2014 no shell shim.",
+  "version": "0.1.1",
+  "description": "Paperclip external adapter that runs OMP (Oh My Pi) as a native local agent runtime — no shell shim.",
   "keywords": [
     "paperclip",
     "paperclipai",

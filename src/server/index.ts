@@ -54,7 +54,7 @@ export const sessionCodec: AdapterSessionCodec = {
 };
 
 import { execute as ompExecute } from "./execute.js";
-import { listPiSkills as listOmpSkills, syncPiSkills as syncOmpSkills } from "./skills.js";
+import { listOmpSkills, syncOmpSkills } from "./skills.js";
 import { testEnvironment as ompTestEnvironment } from "./test.js";
 import { listOmpModels } from "./models.js";
 
@@ -92,7 +92,7 @@ export function createServerAdapter(): ServerAdapterModule {
 }
 
 export { execute } from "./execute.js";
-export { listPiSkills, syncPiSkills } from "./skills.js";
+export { listOmpSkills, syncOmpSkills, listPiSkills, syncPiSkills } from "./skills.js";
 export { testEnvironment } from "./test.js";
 export {
   listOmpModels,
