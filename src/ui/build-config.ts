@@ -1,6 +1,6 @@
 import { buildAdapterEnvConfig, type CreateConfigValues } from "@paperclipai/adapter-utils";
 
-export function buildPiLocalConfig(v: CreateConfigValues): Record<string, unknown> {
+export function buildOmpLocalConfig(v: CreateConfigValues): Record<string, unknown> {
   const ac: Record<string, unknown> = {};
   if (v.cwd) ac.cwd = v.cwd;
   if (v.instructionsFilePath) ac.instructionsFilePath = v.instructionsFilePath;
