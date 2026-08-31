@@ -1,0 +1,79 @@
+{
+  "name": "paperclip-adapter-omp-local",
+  "version": "0.1.0",
+  "description": "Paperclip external adapter that runs OMP (Oh My Pi) as a native local agent runtime \u2014 no shell shim.",
+  "keywords": [
+    "paperclip",
+    "paperclipai",
+    "adapter",
+    "omp",
+    "oh-my-pi",
+    "agent",
+    "coding-agent",
+    "ai"
+  ],
+  "license": "MIT",
+  "author": "navidRashik",
+  "homepage": "https://github.com/navidRashik/paperclip-adapter-omp-local#readme",
+  "bugs": {
+    "url": "https://github.com/navidRashik/paperclip-adapter-omp-local/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navidRashik/paperclip-adapter-omp-local.git"
+  },
+  "type": "module",
+  "paperclip": {
+    "adapterUiParser": "1.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.js"
+    },
+    "./ui": {
+      "types": "./dist/ui/index.d.ts",
+      "import": "./dist/ui/index.js"
+    },
+    "./cli": {
+      "types": "./dist/cli/index.d.ts",
+      "import": "./dist/cli/index.js"
+    },
+    "./ui-parser": "./ui-parser.cjs"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "ui-parser.cjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "@paperclipai/adapter-utils": ">=2026.831.0-canary.13"
+  },
+  "devDependencies": {
+    "@paperclipai/adapter-utils": "2026.831.0-canary.13",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
