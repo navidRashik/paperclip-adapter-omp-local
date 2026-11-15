@@ -54,7 +54,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "node init && tsc",
+    "build": "tsc",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run clean && npm run build"
